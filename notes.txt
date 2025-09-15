@@ -35,8 +35,8 @@ Monday
 > anti-patterns - when things go wrong and you do it again!
 > after lunch review exercise (show what you built)
 - immediate Python
-- redirection and context
-- Abstract base class
+> redirection and context
+> Abstract base class
 - we will need Jupyter Notebooks later in the week
 
 Tuesday
