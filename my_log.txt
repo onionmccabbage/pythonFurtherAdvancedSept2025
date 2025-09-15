@@ -6,3 +6,7 @@ this output will be redirected
 this output will be redirected
 this output will be redirected
 this output will be redirected
+this will be redirected to a file instead of the console
+this will be redirected to a file instead of the console
+this will be redirected to a file instead of the console
+this will be redirected to a file instead of the console

@@ -20,7 +20,7 @@ class Redirect:
 def main():
     '''exercise the code'''
     my_text = 'this will be redirected to a file instead of the console'
-    fout = open('my_log', 'at')
+    fout = open('my_log.txt', 'at')
     r = Redirect(fout) # we pass a context in this case it is a file access object
     with r:
         print(my_text)
