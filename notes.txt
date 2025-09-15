@@ -24,7 +24,7 @@ Monday
   - some conventions: ClassesUsePascalCase, methodsUseCamelCase identifiers_use_snake_case
 - design patterns - following proven good practices
 > constructor pattern
-- Decorator pattern
+> Decorator pattern
 - Factory pattern
 - Facade pattern
 - command pattern
