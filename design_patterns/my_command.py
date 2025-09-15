@@ -46,10 +46,26 @@ class SellStock(Order):
 
 class Agent:
     '''The agent will issue commands'''
-
+    def __init__(self):
+        self.__order_queue = [] # an empty list which will contain the commands to be executed
+    def placeOrder(self, order):
+        # we should validate ...
+        self.__order_queue.append(order)
+        # here we execute the order. We are on a single thread, 
+        # but in a multi-threaded or async environment, this might be delayed
+        # we might choose to pop the commands as we execute them
+        o = self.__order_queue.pop()
+        o.execute()
 
 def main():
     '''use the classes to illustrate the command design pattern'''
+    stock = StockTrade()
+    buy   = BuyStock(stock)
+    sell  = SellStock(stock)
+    agent = Agent()
+    # invoke some commands
+    agent.placeOrder(buy)
+    agent.placeOrder(sell)
 
 if __name__ == '__main__':
     main()
