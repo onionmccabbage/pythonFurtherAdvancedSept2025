@@ -23,3 +23,20 @@ class Bat(Animal):
     def make_noise(self):
         return '_____'
 
+class CreatureFactory():
+    '''This is a single-point-of-access to manufacture any type of creature'''
+    def make_sound(self, obj):
+        # e.g. cat, lion etc.
+        # NB the 'eval' concept is generally considered poor form, we try to avoid it
+        # this often considerd to be a security attack surface
+        return eval(obj)().make_noise() # we might pass in a function or a class then find the __name__
+    
+if __name__ == '__main__':
+    # exercise the code to make sure this module works as intended
+    cf = CreatureFactory()
+    n1 = cf.make_sound('Lion')
+    print(n1)
+    # a tuple of creatures
+    cre = ('Cat', 'Bat', 'Dog', 'Cat', 'Lion')
+    for _ in cre:
+        print(f'{_} says {cf.make_sound(_)}')
