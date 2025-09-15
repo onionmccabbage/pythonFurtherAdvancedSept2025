@@ -45,7 +45,7 @@ if __name__ == '__main__':
     # check to see if a 'creature' has already been provided as a system argument
     if len(sys.argv) > 1:
         # creature = input('Which creature: ')
-        creature = sys.argv[1]
+        creature = sys.argv[1] # NB all system argument variables are ALWAYS string
         if creature in ('Cat', 'Dog', 'Lion', 'Bat'):
             noise = cf.make_sound(creature) 
             print(f'The {creature} says {noise}')
