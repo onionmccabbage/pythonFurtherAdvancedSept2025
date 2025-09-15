@@ -32,7 +32,7 @@ class Artisan:
         print('wireframes are ready')
 
 class Manager:
-    'the manager is the facade to these diferent classes. They are sufficiently different to use a facade'
+    'the manager is the facade to these different classes. They are sufficiently different to use a facade'
     def __init__(self):
         print('The manager says I can arrange the team')
     def arrange(self):

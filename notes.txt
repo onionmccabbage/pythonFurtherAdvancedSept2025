@@ -11,22 +11,20 @@ Toby Dussek
 4:30  end
 
 Monday
-- welcome
+> welcome
     - introduce yourself
     - existing Python experience
     - other technologies
     - anything particular from this course
-
-
-- we will be installing additional packages as needed
+> we will be installing additional packages as needed
 - conventions
   - as will all languages, identifiers can use letters, numbers and underscore (don't start with a number)
   - some conventions: ClassesUsePascalCase, methodsUseCamelCase identifiers_use_snake_case
 - design patterns - following proven good practices
 > constructor pattern
 > Decorator pattern
-- Factory pattern
-- Facade pattern
+> Factory pattern
+> Facade pattern
 - command pattern
 - proxy pattern
 - anti-patterns - when things go wrong and you do it again!
