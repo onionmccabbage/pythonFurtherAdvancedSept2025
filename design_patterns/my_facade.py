@@ -33,3 +33,20 @@ class Artisan:
 
 class Manager:
     'the manager is the facade to these diferent classes. They are sufficiently different to use a facade'
+    def __init__(self):
+        print('The manager says I can arrange the team')
+    def arrange(self):
+        '''The facade provides isntances of all the other subsystems/microservices'''
+        self.coder      = Coder()
+        self.technician = Technician()
+        self.tester     = Tester()
+        self.artisan    = Artisan()
+        # .. plus any additional assets we may need....
+        self.coder.book_time()
+        self.tester.testing()
+        self.technician.doTechyStuff()
+        self.artisan.make_prototype()
+
+if __name__ == '__main__':
+    manager = Manager() # this is our facade
+    manager.arrange() # get things going
