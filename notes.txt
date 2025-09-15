@@ -33,7 +33,7 @@ Monday
 - command pattern
 - proxy pattern
 - anti-patterns - when things go wrong and you do it again!
-- after lunch review exercise (show what you built)
+> after lunch review exercise (show what you built)
 - immediate Python
 - redirection and context
 - Abstract base class
