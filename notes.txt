@@ -31,8 +31,8 @@ Monday
 > Factory pattern
 > Facade pattern
 > command pattern
-- proxy pattern
-- anti-patterns - when things go wrong and you do it again!
+> proxy pattern
+> anti-patterns - when things go wrong and you do it again!
 > after lunch review exercise (show what you built)
 - immediate Python
 - redirection and context

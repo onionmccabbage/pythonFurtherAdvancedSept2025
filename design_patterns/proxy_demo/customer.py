@@ -8,7 +8,7 @@ class Customer():
     def makePayment(self):
         self.isPurchased = self.debitCard.doPay() # call our proxy
     def __del__(self):
-        '''__del__ will automaticaly run whenever instancves of thos class end'''
+        '''__del__ will automaticaly run whenever instances of this class end'''
         if self.isPurchased:
             print('Success! we bought something')
         else:
