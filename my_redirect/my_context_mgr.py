@@ -17,3 +17,15 @@ class Redirect:
     def __del__(self): # called ONCE when we delete an instance (or it goes out of contention)
         pass # often used for doing clean-up for this class
 
+def main():
+    '''exercise the code'''
+    my_text = 'this will be redirected to a file instead of the console'
+    fout = open('my_log', 'at')
+    r = Redirect(fout) # we pass a context in this case it is a file access object
+    with r:
+        print(my_text)
+    fout.close()
+    print('back to the console (default context)')
+
+if __name__ == '__main__':
+    main()
