@@ -1,6 +1,103 @@
 Python Further Advanced
 =======================
-
 September 15-19 2025
 
 Toby Dussek
+
+9:30  start
+11:00 coffee
+12:00 lunch until 1:00
+3:00  tea break
+4:30  end
+
+Monday
+- welcome
+- we will be installing additional packages as needed
+- conventions
+  - as will all languages, identifiers can use letters, numbers and underscore (don't start with a number)
+  - some conventions: ClassesUsePascalCase, methodsUseCamelCase identifiers_use_snake_case
+- design patterns - following proven good practices
+- anti-patterns - when things go wrong and you do it again!
+- Decorator pattern
+- Factory pattern
+- Facade pattern
+- command pattern
+- proxy pattern
+- constructor pattern
+- after lunch review exercise
+- immediate Python
+- redirection and context
+- Abstract base class
+- we will need Jupyter Notebooks later in the week
+
+Tuesday
+- how to access the course recordings
+- using __str__ and __repr__
+- architectural patterns: inheritance, composition...
+- __slots__
+- stateful pattern
+- functional design
+- observables and subscribers
+- concurrency and parallel code
+- the GIL
+  see https://realpython.com/python-gil/
+- thread functions and thread classes
+- thread locks/rlocks/semaphores
+- semaphore quantity
+- after lunch review exercise
+
+Wednesday
+- a word about venv
+- thread-safe decorator
+- custom thread decorator to make classes and methods thread safe
+- the 'with' operator
+- asyncio (Python 3.7 or better)
+  see https://docs.python.org/3/library/asyncio-task.html#coroutines
+- daemon threads, thread events
+- RxPY https://rxpy.readthedocs.io/en/latest/index.html
+       https://rxmarbles.com/
+- multiprocessing
+- why use a thread or a process
+- performance and timing
+- profiling with @profile and cProfile
+- after lunch review exercise
+- generators
+- prepare for Thursday
+
+Thursday
+- options for Jupyter Notebooks:
+  - use Anaconda (NB it is likely you cannot use the free Anaconda within Ericsson)
+  - pip install notebook
+  - just use existing VSCode (or similar)
+  - use cloud (e.g. colab https://colab.research.google.com/ or https://jupyter.org/try)
+  - or just write NORMAL python modules
+- Python for Data Analysis
+  we will need:
+  - Jupyter notebooks
+  - numpy
+  - pandas
+  - matplotlib
+- using Jupyter notebooks
+   Data sources (csv, xlsx, text, db, url...)
+   you can 'pip install jupyter' then start it with 'python -m notebook'
+   then you will also need to pip install numpy, pandas etc.
+- numpy and data structures: the arange and array 
+- pandas: series and dataframe
+- NaN, creating stuctures, analysis (stats)
+- data cleansing and preparation
+- descriptive statistics
+- handling files and remote data
+- after lunch review exercise
+
+Friday
+- data vizualisation with matplotlib
+- statistical analysis and correlation
+  REMEMBER: correlation does NOT prove CAUSATION
+  https://www.tylervigen.com/spurious-correlations
+- review of microservices (inc. multi threading) and asyncio
+- Flask:
+  to run as a debug server: flask --app my_flask.py --debug run
+  or else debug=True in the app run declaration
+  see https://flask.palletsprojects.com/en/2.3.x/
+- after lunch review exercise
+- end of course feedback
