@@ -52,7 +52,7 @@ Tuesday
 > architectural patterns: inheritance, composition...
 > __slots__
 - stateful pattern
-- functional design
+> functional design
 - observables and subscribers
 - concurrency and parallel code
 - the GIL
