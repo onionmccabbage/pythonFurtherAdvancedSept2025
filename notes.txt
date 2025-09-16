@@ -7,7 +7,7 @@ Toby Dussek
 9:30  start
 11:00 coffee
 12:00 lunch until 1:00
-3:00  tea break break 3:10 to 3:25
+3:00  tea break break until 3:15
 4:30  end
 
 The course Website is
@@ -54,12 +54,16 @@ Tuesday
 > stateful pattern
 > functional design
 - observables and subscribers
-- concurrency and parallel code
-- the GIL
+> concurrency and parallel code
+> the GIL
   see https://realpython.com/python-gil/
+  from 3.14 (Oct 7 2025) we can avoid the GIL
+  see https://www.pythoncheatsheet.org/blog/python-3-14-breaking-free-from-gil
 > thread functions and thread classes
-- after lunch review exercise
-q - can we kill threads which have hung or other problems....
+> after lunch review exercise
+q > can we kill threads which have hung or other problems....
+  we never kill thrreads (there is no mechanism in Python)
+  we manage threads e.g. https://www.geeksforgeeks.org/python/python-different-ways-to-kill-a-thread/
 - thread locks/rlocks/semaphores
 - semaphore quantity
 
