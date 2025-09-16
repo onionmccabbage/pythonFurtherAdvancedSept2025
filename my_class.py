@@ -22,8 +22,10 @@ class Point: # by default all classes inherit from object
             self.__y = new_y
         else:
             raise TypeError('y must be a number')
-    def __str__(self):
+    def __str__(self): # if we define __str__ then it will be used when we print instances of this class
         return f'Point is at x:{self.__x} y:{self.__y}'
+    def __repr__(self): # if we define __repr__ hen it will be used in immediate mode python
+        return f'Point is represented by x:{self.__x} y:{self.__y}'
         
 if __name__ == '__main__':
     p1 = Point(3,4)
