@@ -1,8 +1,9 @@
 class Point: # by default all classes inherit from object
     '''this class defines a point in 2-d space
     x and y will be coordinates tha uniquely define this point'''
+    __slots__ = ['__x', '__y'] # restricted what properties are permitted
     def __init__(self, x, y):
-        self.x = x
+        self.x = x # this line invokes the setter method for x
         self.y = y
     @property
     def x(self): # getter method
@@ -30,5 +31,9 @@ class Point: # by default all classes inherit from object
 if __name__ == '__main__':
     p1 = Point(3,4)
     # p2 = Point('3', '4')
+    # we cannot access the mangled values __x or __y
+    # but be careful. By default we inherited from 'object' and all 'objects' allow arbitrary properties
+    p1.__x = 'wibblywoo' # daft
+    print(p1.__x)
     print(p1)
 
