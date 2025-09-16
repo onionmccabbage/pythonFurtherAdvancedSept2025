@@ -41,16 +41,16 @@ Monday
 > proxy pattern
 > anti-patterns - when things go wrong and you do it again!
 > after lunch review exercise (show what you built)
-- immediate Python
+> immediate Python
 > redirection and context
 > Abstract base class
 - we will need Jupyter Notebooks later in the week
 
 Tuesday
-- how to access the course recordings
-- using __str__ and __repr__
-- architectural patterns: inheritance, composition...
-- __slots__
+> how to access the course recordings
+> using __str__ and __repr__
+> architectural patterns: inheritance, composition...
+> __slots__
 - stateful pattern
 - functional design
 - observables and subscribers
