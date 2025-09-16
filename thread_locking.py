@@ -7,9 +7,9 @@ import random
 import timeit
 
 # here are some global variables
-testsAvailable = 100 # this would usually be a DB, an API, a file access...
+testsAvailable = 2048 # this would usually be a DB, an API, a file access...
 lock = threading.Lock()
-num_runners = 32
+num_runners = 256 # this is limited by the OS thread management
 
 class TestRunner(threading.Thread): # NB here there will be no actual tests
     '''imitate random time between running tests across threads'''
