@@ -1,5 +1,7 @@
-Python Review Exercise 2
+Python Review Exercise 2 1hr35mins until 3:00 Ireland time
 ========================
+remember - look online, ask me, ask each other.... work in teams
+
 For this project, use modules and imports to separate your code structures
 
 In a new module, write a class called 'Weather'
@@ -14,7 +16,7 @@ Next, in another module import your Weather class
 You will also need something like this at the top of this module:
   from threading import Thread
   import requests
-  
+
 Write a 'WeatherGetter' class that inherits from Thread
 In the __init__ method provide a 'city' parameter
 
@@ -30,6 +32,7 @@ Populate a 'data' object from the response as JSON, then set self.temperature to
 Declare a list of cities, e.g. 
   CITIES = ['Athlone', 'Dublin', 'Galway', 'Belfast', 'Genoa', 'Cork', 'Budapest', 'Kista']
 Iterate over these cities, starting a new thread for your 'WeatherGetter' for each city
+(if we hit the throughput limit I have alternative API keys...)
 
 Print out the temperature for each of the cities
 
