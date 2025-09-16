@@ -10,6 +10,13 @@ Toby Dussek
 3:00  tea break break 3:10 to 3:25
 4:30  end
 
+The course Website is
+  https://sites.neueda.com/lm_ericsson_beyond_advanced_python/site/index.html
+All my code will be in this repository
+  https://github.com/onionmccabbage/pythonFurtherAdvancedSept2025
+Credentials for course recording: student pwd: Belfast2024
+
+
 Monday
 > welcome
     - introduce yourself

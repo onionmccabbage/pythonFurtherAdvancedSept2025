@@ -7,3 +7,4 @@ def writeText(t) -> str:
     return (t, f'we received a value {t} which is of type {type(t)}')
 
 print(writeText('hello'), type(writeText('Hello')))
+
