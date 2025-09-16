@@ -27,6 +27,7 @@ def main():
     t2.join()
     t3.join()
     t4.join()
+    
     # when those other threads have completed, they will re-join this main thread, which then carries on
     print('all the subthreads have completed')
     # it is as good idea to tidy up when we no longer need other threads

@@ -58,6 +58,7 @@ Tuesday
 - the GIL
   see https://realpython.com/python-gil/
 - thread functions and thread classes
+q - can we kill threads which have hung or other problems....
 - thread locks/rlocks/semaphores
 - semaphore quantity
 - after lunch review exercise
