@@ -51,7 +51,7 @@ Tuesday
 > using __str__ and __repr__
 > architectural patterns: inheritance, composition...
 > __slots__
-- stateful pattern
+> stateful pattern
 > functional design
 - observables and subscribers
 - concurrency and parallel code
