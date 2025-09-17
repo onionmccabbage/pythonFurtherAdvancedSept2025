@@ -10,8 +10,9 @@ def lock_a_method(meth):
         '''this will be a locked version of the passed-in method'''
         try:
             already_locked = getattr(meth, '__is_locked')
-        except ValueError as err:
-            print(err)
+            print(f'{meth} is {already_locked}')
+        # except ValueError as err:
+        #     print(err)
         except Exception:
             # lk.acquire()
             # result = meth(self, *args, **kwargs)
@@ -53,9 +54,11 @@ class MySet(set):
     @lock_a_method # apply the decorator to just one method
     def my_method(self, new_value):
         '''this method only allows int values to be added'''
+        print('my_meth')
         if type(new_value)==int:
             super().add(new_value)
         else:
+            print('not an int')
             pass # do nothing
 
 if __name__ == '__main__':
