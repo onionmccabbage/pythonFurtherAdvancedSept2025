@@ -7,7 +7,7 @@ import time
 import multiprocessing
 
 # it is far more common to use threading (or asyncio) rather than processing
-
+# ..although since we can know the process ID we can manage that within the original Python
 
 def myFn(n):
     '''we will run this function in a separate process'''
