@@ -69,7 +69,7 @@ Tuesday
 Wednesday
 > generators and comprehension
 > a word about venv see https://python.land/virtual-environments/virtualenv
-- daemon threads, thread events
+> daemon threads, thread events
 - custom thread decorator to make classes and methods thread safe
 - the 'with' operator
 - asyncio (Python 3.7 or better)

@@ -8,3 +8,8 @@ def writeText(t) -> str:
 
 print(writeText('hello'), type(writeText('Hello')))
 
+# the set object
+s = {1, 4,5,6,'a', 7,'a', 5, True}
+s.add(9)
+s.remove(7)
+print(s, type(s))
