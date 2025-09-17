@@ -2,9 +2,10 @@ from _news_pub import newsPublisher
 from _email_sub import EmailSub
 from _print_sub import PrintSub
 from _media_sub import MediaSub
+from _qos_sub import QoS
 
 # here we have a global tuple
-subs_t = (EmailSub, PrintSub, MediaSub)
+subs_t = (EmailSub, PrintSub, MediaSub, QoS)
 
 def main():
     '''invoke the parts of our project'''

@@ -83,7 +83,7 @@ Wednesday
 > profiling with @profile and cProfile
 > after lunch review exercise
 > prepare for Thursday  
-- observables and subscribers
+> observables and subscribers
 - RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/
 
