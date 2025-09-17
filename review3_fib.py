@@ -27,6 +27,7 @@ def fib2(n):
         sequence += (reduce( lambda a,b: a+b, sequence[-2:] ),) # careful - one-member tuple
     return sequence[-1] # access the last member of the collection
 
+@profile
 def fib3(n): # on my laptop this is fastest
     a, b = 0, 1
     for _ in range(n+1):

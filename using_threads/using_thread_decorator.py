@@ -8,22 +8,25 @@ def lock_a_method(meth):
     global lk
     def locked_method(self, *args, **kwargs):
         '''this will be a locked version of the passed-in method'''
-        try:
-            already_locked = getattr(meth, '__is_locked')
-            print(f'{meth} is {already_locked}')
+        # try:
+        already_locked = getattr(meth, '__is_locked', False)
+        print(f'{meth} is {already_locked}')
         # except ValueError as err:
-        #     print(err)
-        except Exception:
+            # print(err)
+        # except Exception:
             # lk.acquire()
             # result = meth(self, *args, **kwargs)
             # lk.release()
+        if already_locked==False:
             with lk: # the lock gets applied here see https://www.pythontutorial.net/python-concurrency/python-threading-lock/
                 # lk.acquire() # do not acquire() it is already acquired by 'with'
                 # print('locking...')
                 return meth(self, *args, **kwargs)
-            # the lock will be automaticaly released when the 'with' operator is done
+                # the lock will be automaticaly released when the 'with' operator is done
+        else:
+            return meth(self, *args, **kwargs)
     # we need to assign a sensible name to our new method
-    lock_a_method.__name__ = f'locked_{meth.__name__}'
+    # lock_a_method.__name__ = f'locked_{meth.__name__}'
     locked_method.__is_locked = True # place a flag to indicate this method can be locked
     return locked_method # this contains a lockable version of the original method, renamed acordingly
 
@@ -43,7 +46,7 @@ def make_thread_safe(cls, meth_list, lk): # we choose to pass in a class, a list
 
 def lock_a_class(meth_list, lk):
     '''use this as a decorator'''
-    return lambda cls: make_thread_safe(cls,meth_list, lk)
+    return lambda cls: make_thread_safe(cls, meth_list, lk)
 
 # choose which methods of the 'set' should be made lockable
 @lock_a_class(['add', 'remove', 'my_method'], lk)
@@ -54,7 +57,6 @@ class MySet(set):
     @lock_a_method # apply the decorator to just one method
     def my_method(self, new_value):
         '''this method only allows int values to be added'''
-        print('my_meth')
         if type(new_value)==int:
             super().add(new_value)
         else:

@@ -79,9 +79,9 @@ q - solve the double-locking problem (both decorators)
 > why use asyncio, threads or a processes
   see https://medium.com/@Gayathri_krish/threading-vs-multiprocessing-vs-asyncio-in-python-which-one-should-you-use-7a3b7649d004
   and https://www.krython.com/tutorial/python/threading-vs-multiprocessing-vs-asyncio
-- performance and timing
-- profiling with @profile and cProfile
-- after lunch review exercise
+> performance and timing
+> profiling with @profile and cProfile
+> after lunch review exercise
 - prepare for Thursday  
 - observables and subscribers
 - RxPY https://rxpy.readthedocs.io/en/latest/index.html
