@@ -50,15 +50,13 @@ class MySet(set):
     '''inherit from the 'set' object with custom methods'''
     def __init__(self, other_set):
         set.__init__(self, other_set) # call the initializer of the set class
-    # @lock_a_method # apply the decorator to just one method
+    @lock_a_method # apply the decorator to just one method
     def my_method(self, new_value):
         '''this method only allows int values to be added'''
         if type(new_value)==int:
             super().add(new_value)
         else:
             pass # do nothing
-
-
 
 if __name__ == '__main__':
     '''exercise the module'''
@@ -69,3 +67,7 @@ if __name__ == '__main__':
     m.my_method(42)
     m.my_method('42') # nothing will happen
     print(m)
+    # check stuff
+    print(m.my_method.__is_locked) # True
+    print(m.add.__is_locked) # True
+    print(m.remove.__is_locked) # True
