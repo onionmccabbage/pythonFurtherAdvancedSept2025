@@ -9,7 +9,7 @@ def lock_a_method(meth):
     def locked_method(self, *args, **kwargs):
         '''this will be a locked version of the passed-in method'''
         # try:
-        already_locked = getattr(meth, '__is_locked', False)
+        already_locked = getattr(meth, '__is_locked', False) # here False is the default (for missing atttributes)
         print(f'{meth} is {already_locked}')
         # except ValueError as err:
             # print(err)
