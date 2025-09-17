@@ -4,7 +4,12 @@
 import timeit
 from functools import reduce
 from memory_profiler import profile
+# to use cProfile
+# python -m cProfile -o prof_out fib.py
 
+
+
+@profile
 def fib1(n):
     '''here is a low-performance fibonacci function'''
     if n in (0,1):
@@ -23,7 +28,7 @@ def fib2(n):
 
 if __name__ == '__main__':
     start = timeit.default_timer()
-    print( fib2(22) ) # fib1 about 0.02 or better. fib2 takes 0.0002 or better
+    print( fib2(3) ) # fib1 about 0.02 or better. fib2 takes 0.0002 or better
     end = timeit.default_timer()
     print(end-start)
     
