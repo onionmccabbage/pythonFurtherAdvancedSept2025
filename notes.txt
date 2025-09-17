@@ -60,7 +60,7 @@ Tuesday
   see https://www.pythoncheatsheet.org/blog/python-3-14-breaking-free-from-gil
 > thread functions and thread classes
 > after lunch review exercise
-q > can we kill threads which have hung or other problems....
+> can we kill threads which have hung or other problems....
   we never kill thrreads (there is no mechanism in Python)
   we manage threads e.g. https://www.geeksforgeeks.org/python/python-different-ways-to-kill-a-thread/
 > thread locks/rlocks/semaphores
@@ -68,10 +68,9 @@ q > can we kill threads which have hung or other problems....
 
 Wednesday
 - a word about venv
-- thread-safe decorator
+- daemon threads, thread events
 - custom thread decorator to make classes and methods thread safe
 - the 'with' operator
-- daemon threads, thread events
 - asyncio (Python 3.7 or better)
   see https://docs.python.org/3/library/asyncio-task.html#coroutines
 - multiprocessing
@@ -83,7 +82,7 @@ Wednesday
 - profiling with @profile and cProfile
 - after lunch review exercise
 - generators
-- prepare for Thursday
+- prepare for Thursday  
 
 Thursday
 - options for Jupyter Notebooks:
