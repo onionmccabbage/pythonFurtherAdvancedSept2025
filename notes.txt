@@ -71,7 +71,7 @@ Wednesday
 > a word about venv see https://python.land/virtual-environments/virtualenv
 > daemon threads, thread events
 > custom thread decorator to make classes and methods thread safe
-q - solve the double-locking problem (both decorators)
+> solve the double-locking problem (both decorators)
 > the 'with' operator
 > asyncio (Python 3.7 or better)
   see https://docs.python.org/3/library/asyncio-task.html#coroutines
@@ -82,7 +82,7 @@ q - solve the double-locking problem (both decorators)
 > performance and timing
 > profiling with @profile and cProfile
 > after lunch review exercise
-- prepare for Thursday  
+> prepare for Thursday  
 - observables and subscribers
 - RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/
@@ -90,7 +90,8 @@ q - solve the double-locking problem (both decorators)
 Thursday
 - options for Jupyter Notebooks:
   - use Anaconda (NB it is likely you cannot use the free Anaconda within Ericsson)
-  - pip install notebook
+  - pip install notebook (see https://jupyter.org/install)
+  - pip install jupyter (or pip3 install...) (or python -m pip3 install ...)
   - just use existing VSCode (or similar)
   - use cloud (e.g. colab https://colab.research.google.com/ or https://jupyter.org/try)
   - or just write NORMAL python modules
