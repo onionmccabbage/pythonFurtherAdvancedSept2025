@@ -14,11 +14,11 @@ def lock_a_method(meth):
             print(err)
         except Exception:
             # lk.acquire()
-            # # print('locking...')
             # result = meth(self, *args, **kwargs)
             # lk.release()
             with lk: # the lock gets applied here see https://www.pythontutorial.net/python-concurrency/python-threading-lock/
                 # lk.acquire() # do not acquire() it is already acquired by 'with'
+                # print('locking...')
                 return meth(self, *args, **kwargs)
             # the lock will be automaticaly released when the 'with' operator is done
     # we need to assign a sensible name to our new method
@@ -44,11 +44,13 @@ def lock_a_class(meth_list, lk):
     '''use this as a decorator'''
     return lambda cls: make_thread_safe(cls,meth_list, lk)
 
+# choose which methods of the 'set' should be made lockable
+@lock_a_class(['add', 'remove', 'my_method'], lk)
 class MySet(set):
     '''inherit from the 'set' object with custom methods'''
     def __init__(self, other_set):
         set.__init__(self, other_set) # call the initializer of the set class
-    @lock_a_method # apply the decorator to just one method
+    # @lock_a_method # apply the decorator to just one method
     def my_method(self, new_value):
         '''this method only allows int values to be added'''
         if type(new_value)==int:
@@ -63,6 +65,7 @@ if __name__ == '__main__':
     s = (1,2,3,4)
     m = MySet(s)
     m.add(5)
+    m.remove(2)
     m.my_method(42)
     m.my_method('42') # nothing will happen
     print(m)
