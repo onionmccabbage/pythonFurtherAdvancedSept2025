@@ -13,11 +13,14 @@ def lock_a_method(meth):
         except ValueError as err:
             print(err)
         except Exception:
-            lk.acquire()
-            # print('locking...')
-            result = meth(self, *args, **kwargs)
-            lk.release()
-            return result
+            # lk.acquire()
+            # # print('locking...')
+            # result = meth(self, *args, **kwargs)
+            # lk.release()
+            with lk: # the lock gets applied here see https://www.pythontutorial.net/python-concurrency/python-threading-lock/
+                # lk.acquire()
+                return meth(self, *args, **kwargs)
+            # the lock will be automaticaly released when the 'with' operator is done
     # we need to assign a sensible name to our new method
     lock_a_method.__name__ = f'locked_{meth.__name__}'
     locked_method.__is_locked = True # place a flag to indicate this method can be locked
