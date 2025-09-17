@@ -67,6 +67,7 @@ Tuesday
 > semaphore quantity depends on the capabilities of the asset being accessed
 
 Wednesday
+- generators and comprehension
 - a word about venv
 - daemon threads, thread events
 - custom thread decorator to make classes and methods thread safe
@@ -81,7 +82,6 @@ Wednesday
 - performance and timing
 - profiling with @profile and cProfile
 - after lunch review exercise
-- generators
 - prepare for Thursday  
 
 Thursday

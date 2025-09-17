@@ -17,9 +17,9 @@ class MyClass(Thread): # we inherit from the Thread class
 def main():
     '''invoke the class as a Thread'''
     # we can work with a large quantity of new threads
-    thread_list = []
-    for _ in range(0,1024):
-        thread_list.append( MyClass(_) )
+    thread_list = [MyClass(_) for _ in range(0,1024) ] # use a comprehension for short-hand
+    # for _ in range(0,1024):
+    #     thread_list.append( MyClass(_) )
     start = timeit.default_timer()
     for thread in thread_list:
         thread.start()
