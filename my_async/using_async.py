@@ -3,7 +3,6 @@
 # the aim of asyncio is to follow modern design practices with elegant code to handle these problems
 import asyncio
 
-
 # async-await is a common pattern in many modern languages
 async def countA():
     '''emulate a long-running process'''
@@ -19,8 +18,13 @@ async def countB(): # typically a different function
 
 async def main():
     '''run our I/O bound operations (or other long-tail functionality)'''
-    await countA()
-    await countB()
+    # await countA()
+    # # then...
+    # await countB()
+    # the above code runs procedurally, the main thread waits for each to complete before moving on
+    # instead we can run these as co-routines (so they run at the same time)
+    # As with threads, we can only create and run async code fro mthe main thread
+    await asyncio.gather(countA(), countB(), countB(), countA(), countA())
 
 
 if __name__ == '__main__':
