@@ -89,29 +89,29 @@ Wednesday
 
 Thursday
 q - index_col
-- options for Jupyter Notebooks:
+> options for Jupyter Notebooks:
   - use Anaconda (NB it is likely you cannot use the free Anaconda within Ericsson)
   - pip install notebook (see https://jupyter.org/install)
   - pip install jupyter (or pip3 install...) (or python -m pip3 install ...)
   - just use existing VSCode (or similar)
   - use cloud (e.g. colab https://colab.research.google.com/ or https://jupyter.org/try)
   - or just write NORMAL python modules
-- Python for Data Analysis
+> Python for Data Analysis
   we will need:
   - Jupyter notebooks
   - numpy
   - pandas
   - matplotlib
-- using Jupyter notebooks
+> using Jupyter notebooks
    Data sources (csv, xlsx, text, db, url...)
    you can 'pip install jupyter' then start it with 'python -m notebook'
    then you will also need to pip install numpy, pandas etc.
-- numpy and data structures: the arange and array 
-- pandas: series and dataframe
+> numpy and data structures: the arange and array 
+> pandas: Series and DataFrame
 - NaN, creating stuctures, analysis (stats)
 - data cleansing and preparation
 - descriptive statistics
-- handling files and remote data
+> handling files and remote data
 - after lunch review exercise
 
 Friday
