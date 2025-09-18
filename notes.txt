@@ -84,7 +84,7 @@ Wednesday
 > after lunch review exercise
 > prepare for Thursday  
 > observables and subscribers
-- RxPY https://rxpy.readthedocs.io/en/latest/index.html
+> RxPY https://rxpy.readthedocs.io/en/latest/index.html
        https://rxmarbles.com/
 
 Thursday
