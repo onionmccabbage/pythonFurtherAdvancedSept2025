@@ -1,0 +1,44 @@
+Review 4 (Data analysis) until tea break at 3:00
+========================
+Create a new Jupyter Notebook (or a simple python module)
+- read in external data (data/flights_small.csv) into a data frame
+  or (MUCH bigger dataset) flights.csv
+- show the description
+- show the dtypes
+- find the mean flight time (e.g. like this:)
+  print(df.groupby('AIRLINE')[['DEPARTURE_DELAY']].count())
+  print(df.groupby('AIRLINE')[['DEPARTURE_DELAY']].min())
+‐ Group the data into a separate data frame for any single airline
+  e.g. DL_ = df[df['AIRLINE']=='DL']
+
+In the original flights data set, find:
+‐ The number of flight records (i.e. count())
+‐ The number of unique airlines (use nunique)
+‐ How many unique aircraft are represented (tail number)
+
+--------------------------------------------------------------
+
+For the following decide what is meant by 'delay' (e.g. departure times or arrival times or wheels-off...)
+‐ The minimum and mean departure delay for your chosen airlines (or all)
+  here's one approach:
+    i = df[['DEPARTURE_DELAY', 'ARRIVAL_DELAY', 'DISTANCE']]
+    i.agg(['min', 'mean'])
+‐ Find the greatest recorded delay (show the related data)
+
+--------------------------------------------------------------
+
+Optional: Consider how you can address the following challenges:
+‐ On average, which airline is the most punctual
+‐ Which airline arrives ahead of time most often
+‐ Does flight duration appear to affect arrival punctuality more for some airlines than others
+‐ Does time of day appear to affect departure punctuality across all flights
+‐ Are the standard deviations of flight duration close to the standard deviations of flight distance
+- Fimd the mean delay for just the first 50 records in the dataset, 
+  then for all delays of 15 or more units
+
+More Optional
+Explore the datasets available at https://www.kaggle.com/datasets
+Sign up for free and download a few data sets to analyse
+e.g. find statistical relationships between wealth and life expectancy
+Show the classic iris data set
+Show us what you work with in your own work with data (ML etc)
