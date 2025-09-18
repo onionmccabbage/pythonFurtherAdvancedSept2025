@@ -88,7 +88,6 @@ Wednesday
        https://rxmarbles.com/
 
 Thursday
-q - index_col
 > options for Jupyter Notebooks:
   - use Anaconda (NB it is likely you cannot use the free Anaconda within Ericsson)
   - pip install notebook (see https://jupyter.org/install)
@@ -108,15 +107,15 @@ q - index_col
    then you will also need to pip install numpy, pandas etc.
 > numpy and data structures: the arange and array 
 > pandas: Series and DataFrame
-- NaN, creating stuctures, analysis (stats)
-- data cleansing and preparation
-- descriptive statistics
+> NaN, creating stuctures, analysis (stats)
+> data cleansing and preparation
+> descriptive actionable  statistics
 > handling files and remote data
-- after lunch review exercise
+> after lunch review exercise
 
 Friday
 - data vizualisation with matplotlib
-- statistical analysis and correlation
+> statistical analysis and correlation
   REMEMBER: correlation does NOT prove CAUSATION
   https://www.tylervigen.com/spurious-correlations
 - review of microservices (inc. multi threading) and asyncio
