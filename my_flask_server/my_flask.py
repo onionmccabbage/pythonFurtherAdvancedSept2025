@@ -11,9 +11,18 @@ def main():
     # we declare routes for the web server
     @app.route('/') # the entry point of the server
     def root():
-        return 'Welcome'
-    # we start teh Flask server like this
-    app.run() # a run-loop is started and the server is invoked
+        return 'Hello'
+    @app.route('/greet')
+    def greet():
+        return '<h3>Greetings from Flask</h3>'
+    @app.route('/info')
+    @app.route('/about')   # common mis-spellings, or different brand names for a feature, or changes...
+    @app.route('/details') # any of those routes will end up on this page
+    def generic():
+        return '<p>Information about stuff</p>'
+    # we start the Flask server like this
+    # debug=True will make a watching-server: any changes will cycle the server
+    app.run(debug=True) # a run-loop is started and the server is invoked
 
 if __name__ == '__main__':
     main()

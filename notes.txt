@@ -96,6 +96,11 @@ Thursday
   - use cloud (e.g. colab https://colab.research.google.com/ or https://jupyter.org/try)
   - or just write NORMAL python modules
 > Python for Data Analysis
+  see
+  https://realpython.com/tutorials/data-science/
+  https://www.kaggle.com/learn
+  https://pll.harvard.edu/course/introduction-data-science-python
+ 
   we will need:
   - Jupyter notebooks
   - numpy
