@@ -1,9 +1,10 @@
 # a simple microservice
 import socket
+import threading
 
-# plan: every time we receive from a client, persist this to a byte file
+# every time we receive from a client, persist this to a byte file
 # do this on separate threads
-
+from file_writer import writeBytes
 
 
 def server():
@@ -28,6 +29,10 @@ def server():
             # NB our buffer contains bytes (not a plain string)
             buf_str = buffer.decode()
             print(f'Server received {buf_str}') # what do we get...
+            # invoke a thread and write the buffer to a byte file
+            t = threading.Thread(target=writeBytes, args=(buffer,))
+            t.start()
+            # no join() so we don't block the main thread
             # provide a mechanism for our server to stop cleanly
             if buffer == b'quit': # b'...' makes a byte string out of text
                 break # the while loop will end here
