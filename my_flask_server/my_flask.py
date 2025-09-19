@@ -20,6 +20,13 @@ def main():
     @app.route('/details') # any of those routes will end up on this page
     def generic():
         return '<p>Information about stuff</p>'
+    # a truly RESTful URL allowes parameters in the URL
+    @app.route('/category')
+    @app.route('/category/<cat>') # these values in <> are injected as REST values
+    @app.route('/category/<cat>/<id>')
+    def category(cat='people', id=1): # we provide sensible default values
+        return f'Category is {cat} id is {id}'
+
     # we start the Flask server like this
     # debug=True will make a watching-server: any changes will cycle the server
     app.run(debug=True) # a run-loop is started and the server is invoked
