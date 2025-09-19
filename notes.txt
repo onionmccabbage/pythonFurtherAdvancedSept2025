@@ -121,10 +121,11 @@ Friday
 - review of microservices
 - multi threading
 - asyncio microservices
-q - can we control the number of concurrent accesses to our microservice....
+> we can control the number of concurrent accesses to our microservice....
 - Flask:
   to run as a debug server: flask --app my_flask.py --debug run
   or else debug=True in the app run declaration
   see https://flask.palletsprojects.com/en/2.3.x/
 - after lunch review exercise
 - end of course feedback
+  https://apps.powerapps.com/play/17579985-153c-4727-b1f4-8b53e48b5e72?tenantId=92e84ceb-fbfd-47ab-be52-080c6b87953f&Type=ILT&ID=LDIP-539-06396&OID=518955&Title=Beyond%20Advanced%20Python&Owner=Randhir%20Ram
