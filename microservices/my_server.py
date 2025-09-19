@@ -1,6 +1,11 @@
 # a simple microservice
 import socket
 
+# plan: every time we receive from a client, persist this to a byte file
+# do this on separate threads
+
+
+
 def server():
     '''a simple microservice socket server'''
     # these are common sensible defaults
