@@ -8,7 +8,10 @@ from flask import Flask # we may need to pip install Flask
 def main():
     '''here is a simple Flask web server'''
     app = Flask(__name__)
-
+    # we declare routes for the web server
+    @app.route('/') # the entry point of the server
+    def root():
+        return 'Welcome'
     # we start teh Flask server like this
     app.run() # a run-loop is started and the server is invoked
 
