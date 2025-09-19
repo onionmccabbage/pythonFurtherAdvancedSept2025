@@ -15,7 +15,7 @@ async def my_client(message):
     # reader.close()
 
 def makeBytes(values):
-    '''convert teh values to bytes'''
+    '''convert the  values to bytes'''
     b = bytes(values)
     return b
 
