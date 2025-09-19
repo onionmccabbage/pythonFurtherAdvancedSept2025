@@ -3,3 +3,7 @@ this, is, clever
 default message
 all, done, on, threads
 quit
+default
+hello
+sending data via microservices
+quit
