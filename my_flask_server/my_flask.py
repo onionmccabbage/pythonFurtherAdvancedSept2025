@@ -1,5 +1,5 @@
 from flask import Flask # we may need to pip install Flask
-
+from flask import render_template
 # Flask is a full-featured BASIC web server. It efficiently handles web request and serves responses
 # flask contains a micro-syntax for configuring response objects
 
@@ -26,6 +26,11 @@ def main():
     @app.route('/category/<cat>/<id>')
     def category(cat='people', id=1): # we provide sensible default values
         return f'Category is {cat} id is {id}'
+    # here is a route which will invoke an HTML template
+    @app.route('/menu')
+    def menu(specials=None):
+        return render_template('menu.html')
+
 
     # we start the Flask server like this
     # debug=True will make a watching-server: any changes will cycle the server
