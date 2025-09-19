@@ -14,6 +14,7 @@ def server():
     while True: # this will run on the main thread until we terminate the while loop
         # we can handle any client requests
         (client, addr) = server.accept()
+        # print(addr) # the address details of the client
         # the client may send a lot of data. 
         # By convention we examine just the first few bytes
         buffer = client.recv(1024) # receive up to the first 1024 bytes from the client
@@ -22,6 +23,10 @@ def server():
         # provide a mechanism for our server to stop cleanly
         if buffer == b'quit': # b'...' makes a byte string out of text
             break # the while loop will end here
+        else:
+            # simple echo back what the client sent, forced to upper case
+            response = buffer.upper()
+            client.send(response)
 
 
 if __name__ == '__main__':
