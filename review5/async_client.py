@@ -34,5 +34,5 @@ if __name__ == '__main__':
     if len(sys.argv)>1:
         m = sys.argv[1]
     else:
-        m='species'
+        m='people'
     asyncio.run(my_client(m))

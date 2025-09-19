@@ -11,11 +11,12 @@ async def handleRequests(reader, writer):
     print(f'Received {message} from {addr}')
     # additional features
     # call Swapi Service
+    swapi_instance = SwapiService()
     # do we have a permitted number (as a string)?
     if message in ('1','2','3','4','5','6','7'):
-        response = SwapiService.getSwapi('people', message)
+        response = swapi_instance.getSwapi('people', message)
     else:
-        response = SwapiService.getSwapi(message, 1)
+        response = swapi_instance.getSwapi(message, 1)
     print(response)
     # commit every message received to a byte file
     writeBytes(data)

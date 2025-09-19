@@ -4,7 +4,7 @@ import requests
 class SwapiService():
     def __init__(self):
         pass
-    def getSwapi(category, id):
+    def getSwapi(self, category, id):
         url = f"https://swapi.info/api/{category}/{id}"
         print(url)
         response = requests.get(url)
@@ -12,5 +12,5 @@ class SwapiService():
 
 if __name__ == "__main__":
     swapi = SwapiService()
-    p = swapi.getSwapi('people', 1)
+    p = swapi.getSwapi('species', 3)
     print(p)
