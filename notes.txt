@@ -111,15 +111,15 @@ Thursday
 > data cleansing and preparation
 > descriptive actionable  statistics
 > handling files and remote data
+> data vizualisation with matplotlib
 > after lunch review exercise
 
 Friday
-- data vizualisation with matplotlib
 > statistical analysis and correlation
   REMEMBER: correlation does NOT prove CAUSATION
   https://www.tylervigen.com/spurious-correlations
 - review of microservices (inc. multi threading) and asyncio
-  q - can we control the number of concurrent accesses to our microservice....
+q - can we control the number of concurrent accesses to our microservice....
 - Flask:
   to run as a debug server: flask --app my_flask.py --debug run
   or else debug=True in the app run declaration
