@@ -1,5 +1,11 @@
 # client for our microservice
 import socket
+import sys
+
+# mini-challenge
+# within the client, see if any additional sys.argv were sent
+# if so, use them as the message to send to the server
+
 
 def client():
     '''simple socket client to consume microservices'''
@@ -8,7 +14,11 @@ def client():
     try:
         client.connect(setup_t) # we connect to the server
         # next we can send a byte stream to the server
-        client.send('some interesting data'.encode())
+        if len(sys.argv) >1:
+             msg = ', '.join(sys.argv[1:])
+        else:
+             msg = 'default message'
+        client.send(msg.encode())
         # we may reasonably expect aa response from the server
         received = client.recv(1024)
         print(f'Client received {received}')
