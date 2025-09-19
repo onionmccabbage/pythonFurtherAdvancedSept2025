@@ -28,9 +28,10 @@ def main():
         return f'Category is {cat} id is {id}'
     # here is a route which will invoke an HTML template
     @app.route('/menu')
+    @app.route('/menu/<specials>')
     def menu(specials=None):
-        return render_template('menu.html')
-
+        # NB we need to pass any REST arguments to the template
+        return render_template('menu.html', specials=specials)
 
     # we start the Flask server like this
     # debug=True will make a watching-server: any changes will cycle the server
