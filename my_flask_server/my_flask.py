@@ -1,5 +1,5 @@
 from flask import Flask # we may need to pip install Flask
-from flask import render_template
+from flask import render_template, request
 # Flask is a full-featured BASIC web server. It efficiently handles web request and serves responses
 # flask contains a micro-syntax for configuring response objects
 
@@ -32,7 +32,11 @@ def main():
     def menu(specials=None):
         # NB we need to pass any REST arguments to the template
         return render_template('menu.html', specials=specials)
-
+    @app.route('/user')
+    def user():
+        # NB remember to import request from Flask
+        name = request.args.get('name')  # /user?name=John
+        return f"Hello, {name}"
     # we start the Flask server like this
     # debug=True will make a watching-server: any changes will cycle the server
     app.run(debug=True) # a run-loop is started and the server is invoked
