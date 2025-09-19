@@ -1,4 +1,6 @@
 import asyncio
+# we may listen out for sys.argv
+import sys
 
 async def my_client(message):
     '''an asynchronous client to send a message to the server'''
@@ -8,7 +10,11 @@ async def my_client(message):
     writer.write(message.encode())
     await writer.drain() # useful for large data streams
     writer.close()
-    reader.close()
+    # reader.close()
 
 if __name__ == '__main__':
-    asyncio.run(my_client('message from client'))
+    if len(sys.argv) >1:
+        msg = ' '.join(sys.argv[1:])
+    else:
+        msg = 'default'
+    asyncio.run(my_client(msg))

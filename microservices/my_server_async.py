@@ -1,4 +1,6 @@
 import asyncio
+# make use of our byte writer to persist request content
+from file_writer import writeBytes
 
 async def handleRequests(reader, writer):
     '''this server will expect requests from clients and send simple responses'''
@@ -6,6 +8,7 @@ async def handleRequests(reader, writer):
     message = data.decode() # convert the bytes to a string
     address = writer.get_extra_info('peername') # this will be procided by the write object
     print(f'Server received {message} from {address}')
+    writeBytes(data) # write the original bytes
     if message.lower() in ('quit', 'end', 'terminate'):
         '''terminate the server'''
 
