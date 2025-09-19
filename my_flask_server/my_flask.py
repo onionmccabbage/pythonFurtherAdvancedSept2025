@@ -32,6 +32,7 @@ def main():
     def menu(specials=None):
         # NB we need to pass any REST arguments to the template
         return render_template('menu.html', specials=specials)
+    # see https://www.browserstack.com/guide/flask-get-query-parameters
     @app.route('/user')
     def user():
         # NB remember to import request from Flask
