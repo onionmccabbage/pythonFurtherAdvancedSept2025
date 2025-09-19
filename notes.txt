@@ -118,7 +118,9 @@ Friday
 > statistical analysis and correlation
   REMEMBER: correlation does NOT prove CAUSATION
   https://www.tylervigen.com/spurious-correlations
-- review of microservices (inc. multi threading) and asyncio
+- review of microservices
+- multi threading
+- asyncio microservices
 q - can we control the number of concurrent accesses to our microservice....
 - Flask:
   to run as a debug server: flask --app my_flask.py --debug run

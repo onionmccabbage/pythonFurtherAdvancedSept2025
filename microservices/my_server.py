@@ -4,7 +4,8 @@ import socket
 def server():
     '''a simple microservice socket server'''
     # these are common sensible defaults
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
+    # choose a suitable IP address and port
     setup_t = ('localhost', 9876) # localhost maps to 127.0.0.1
     server.bind(setup_t) # here our server is provided with an IP address and port
     # begin listening for clients

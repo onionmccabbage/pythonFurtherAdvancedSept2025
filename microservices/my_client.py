@@ -9,7 +9,7 @@ import sys
 
 def client():
     '''simple socket client to consume microservices'''
-    client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
     setup_t = ('localhost', 9876) 
     try:
         client.connect(setup_t) # we connect to the server
